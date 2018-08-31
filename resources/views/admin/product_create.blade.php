@@ -5,7 +5,7 @@
     <ul class="breadcrumb">
         <li>
             <i class="icon-home"></i>
-            <a href="index.html">Home</a>
+            <a href="#">Home</a>
             <i class="icon-angle-right"></i>
         </li>
         <li>
@@ -54,13 +54,7 @@
                             </div>
                         </div>
                         <div class="control-group hidden-phone">
-                            <label class="control-label" for="textarea2">Product Short Description</label>
-                            <div class="controls">
-                                <textarea class="cleditor" name="short_description" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <div class="control-group hidden-phone">
-                            <label class="control-label" for="textarea2">Product Long Description</label>
+                            <label class="control-label" for="textarea2">Product Description</label>
                             <div class="controls">
                                 <textarea class="cleditor" name="long_description" rows="3"></textarea>
                             </div>
@@ -84,7 +78,7 @@
                             </div>
                         </div>
                         <div class="form-actions">
-                            <button type="submit" class="btn btn-primary">Add Category</button>
+                            <button type="submit" class="btn btn-primary">Add Product</button>
                             <button type="reset" class="btn">Cancel</button>
                         </div>
                     </fieldset>

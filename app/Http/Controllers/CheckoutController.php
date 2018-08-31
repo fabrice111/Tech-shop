@@ -20,6 +20,8 @@ class CheckoutController extends Controller
     {
         $product = Product::all();
 
+        //$contents = Cart::content();
+
         return view('pages/checkout')->with('product', $product);
     }
 
@@ -36,6 +38,8 @@ class CheckoutController extends Controller
 
         $shipping = new Shipping;
 
+        $shipping->user_phonenumber = $request->user_phonenumber;
+        $shipping->user_fullname = $request->user_fullname;
         $shipping->email = $request->email;
         $shipping->firstname = $request->firstname;
         $shipping->lastname = $request->lastname;
@@ -46,12 +50,11 @@ class CheckoutController extends Controller
         $shipping->product_price = $request->product_price;
         $shipping->product_quantity = $request->product_quantity;
 
+         $shipping->save();
 
-        $shipping->save();
+        //dd($request->all());
 
-//        dd($request->all());
-
-        return view('/pages/payment');
+         return view('/pages/payment');
     }
 
     public function payment()

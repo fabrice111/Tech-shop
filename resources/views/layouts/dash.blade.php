@@ -55,6 +55,7 @@
                 <span class="icon-bar"></span>
             </a>
             <a class="brand" href="index.html"><span>Admin area</span></a>
+            <a class="brand" style="padding-left: 15%" href="index.html"><span>Tech-Shop Online Ordering System</span></a>
 
             <!-- start: Header Menu -->
             <div class="nav-no-collapse header-nav">
@@ -99,26 +100,38 @@
         <div id="sidebar-left" class="span2">
             <div class="nav-collapse sidebar-nav">
                 <ul class="nav nav-tabs nav-stacked main-menu">
-                    <li><a href="{{ route('admin.home') }}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-                    <li><a href="{{ route('categories') }}"><i class="icon-tasks"></i><span class="hidden-tablet"> All Categories</span></a></li>
-                    <li><a href="{{ route('category_create') }}"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Category</span></a></li>
+                    <li><a href="{{ route('admin.home') }}"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+                    <li>
+                        <a class="dropmenu" href="#"><i class="icon-tasks"></i><span class="hidden-tablet"> Category</span><span class="label label-important"> 2 </span></a>
+                        <ul>
+                            <li><a class="submenu" href="{{ route('categories') }}"><i class="icon-tasks"></i><span class="hidden-tablet">View Categories</span></a></li>
+                            <li><a class="submenu" href="{{ route('category_create') }}"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Category</span></a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Products</span><span class="label label-important"> 2 </span></a>
                         <ul>
-                            <li><a class="submenu" href="{{ route('products') }}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Products</span></a></li>
+                            <li><a class="submenu" href="{{ route('products') }}"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Products</span></a></li>
                             <li><a class="submenu" href="{{ route('product_create') }}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Product</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Slider</span><span class="label label-important"> 2 </span></a>
+                        <a class="dropmenu" href="#"><i class="icon-star"></i><span class="hidden-tablet"> Slider</span><span class="label label-important"> 2 </span></a>
                         <ul>
-                            <li><a class="submenu" href="{{ route('sliders') }}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Sliders</span></a></li>
-                            <li><a class="submenu" href="{{ route('slider_create') }}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Slider</span></a></li>
+                            <li><a class="submenu" href="{{ route('sliders') }}"><i class="icon-star"></i><span class="hidden-tablet"> View Sliders</span></a></li>
+                            <li><a class="submenu" href="{{ route('slider_create') }}"><i class="icon-star"></i><span class="hidden-tablet"> Add Slider</span></a></li>
                         </ul>
                     </li>
                     <li><a href="{{ route('manage.payment') }}"><i class="icon-list-alt"></i><span class="hidden-tablet"> Manage Payment</span></a></li>
-                    <li><a href="{{ route('view.order') }}"><i class="icon-font"></i><span class="hidden-tablet"> View Order</span></a></li>
-                    <li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Delivery Man</span></a></li>
+                    <li><a href="{{ route('shippings') }}"><i class="icon-folder-open"></i><span class="hidden-tablet"> View Shippings</span></a></li>
+                    <li>
+                        <a class="dropmenu" href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Edit Blog</span><span class="label label-important"> 3 </span></a>
+                        <ul>
+                            <li><a class="submenu" href="{{ route('blog') }}"><i class="icon-edit"></i><span class="hidden-tablet"> Blog</span></a></li>
+                            <li><a class="submenu" href="{{ route('blog_create') }}"><i class="icon-edit"></i><span class="hidden-tablet"> Add Blog</span></a></li>
+                            <li><a class="submenu" href="{{ route('aboutus') }}"><i class="icon-file-alt"></i><span class="hidden-tablet"> About Us</span></a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -138,13 +151,14 @@
         </div>
 
 </div>
+</div>
 
 
 
 <footer>
 
     <p>
-        <span style="text-align:left;float:left">&copy; 2013 <a href="http://bootstrapmaster.com/" alt="Bootstrap Themes">creativeLabs</a></span>
+        <span style="text-align:left;float:left">&copy; 2018 <a href="http://bootstrapmaster.com/" alt="Bootstrap Themes">Fabrice</a></span>
     </p>
 
 </footer>

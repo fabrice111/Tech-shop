@@ -70,6 +70,11 @@ Route::post('/cart/add', [
     'as' => 'cart.add'
 ]);
 
+Route::post('/cart/update', [
+    'uses' => 'ShoppingController@update_cart',
+    'as' => 'update.cart'
+]);
+
 Route::get('/cart/checkout', [
     'uses' => 'CheckoutController@index',
     'as' => 'cart.checkout'
@@ -103,6 +108,16 @@ Route::get('/payment', [
 Route::post('/place/order', [
     'uses' => 'CheckoutController@place_order',
     'as' => 'place.order'
+]);
+
+Route::get('/blog', [
+    'uses' => 'FrontController@blog_index',
+    'as' => 'blog.home'
+]);
+
+Route::get('/about', [
+    'uses' => 'FrontController@about',
+    'as' => 'about'
 ]);
 
 
@@ -207,9 +222,54 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
         'as' => 'payment.delete'
     ]);
 
-    Route::get('/view/order', [
-        'uses' => 'PaymentController@view_order',
-        'as' => 'view.order'
+    Route::get('/view/shipping/{id}', [
+        'uses' => 'PaymentController@view_shipping_single',
+        'as' => 'view.shipping.single'
+    ]);
+
+    Route::get('/shippings', [
+        'uses' => 'PaymentController@shippings',
+        'as' => 'shippings'
+    ]);
+
+    Route::get('/shipping/delete/{id}', [
+        'uses' => 'PaymentController@ship_destroy',
+        'as' => 'shipping.delete'
+    ]);
+
+    Route::get('/shippings', [
+        'uses' => 'PaymentController@shippings',
+        'as' => 'shippings'
+    ]);
+
+    Route::get('/blog', [
+        'uses' => 'BlogController@index',
+        'as' => 'blog'
+    ]);
+
+    Route::get('/blog_create', [
+        'uses' => 'BlogController@create',
+        'as' => 'blog_create'
+    ]);
+
+    Route::post('/blog/store', [
+        'uses' => 'BlogController@store',
+        'as' => 'blog.store'
+    ]);
+
+    Route::get('/blog/delete/{id}', [
+        'uses' => 'BlogController@destroy',
+        'as' => 'blog.delete'
+    ]);
+
+    Route::get('/aboutus', [
+        'uses' => 'BlogController@aboutus',
+        'as' => 'aboutus'
+    ]);
+
+    Route::post('/aboutus/update', [
+        'uses' => 'BlogController@aboutupdate',
+        'as' => 'aboutupdate'
     ]);
 
 });

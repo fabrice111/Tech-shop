@@ -33,6 +33,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <tr>
                     @if($categories->count() > 0)
                         @foreach($categories as $category)
                         <td>{{ $category->id }}</td>

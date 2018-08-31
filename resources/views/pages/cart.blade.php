@@ -23,14 +23,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach(Cart::content() as $product)
+                <!-- @foreach(Cart::content() as $product)
                 <tr>
                     <td class="cart_product">
                         <a href=""><img src="{{ asset($product->model->image) }}" alt="product" width="70px" height="85px"></a>
                     </td>
                     <td class="cart_description">
-                        <h4><a href="">{{ $product->name }}</a></h4>
-                        <p>Web ID: 1089772</p>
+                        <h4><a href="{{ URL::to('product_single',['id' => $product->id]) }}">{{ $product->name }}</a></h4>
                     </td>
                     <td class="cart_price">
                         <p>{{ $product->price }} Frw</p>
@@ -40,6 +39,37 @@
                             <a class="cart_quantity_down" href="{{ route('cart.decr', ['id' => $product->rowId, 'qty' => $product->qty]) }}"> - </a>
                             <input title="Qty" class="cart_quantity_input" value="{{ $product->qty }}" type="text" name="quantity" autocomplete="off" size="1">
                             <a class="cart_quantity_up" href="{{ route('cart.incr', ['id' => $product->rowId, 'qty' => $product->qty]) }}"> + </a>
+                        </div>
+                    </td>
+                    <td class="cart_total">
+                        <p class="cart_total_price">{{ $product->total }} Frw</p>
+                    </td>
+                    <td class="cart_delete">
+                        <a class="cart_quantity_delete" href="{{ route('cart.delete', ['id' => $product->rowId]) }}"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                @endforeach -->
+
+
+                @foreach(Cart::content() as $product)
+                <tr>
+                    <td class="cart_product">
+                        <a href=""><img src="{{ asset($product->model->image) }}" alt="product" width="70px" height="85px"></a>
+                    </td>
+                    <td class="cart_description">
+                        <h4><a href="{{ URL::to('product_single',['id' => $product->id]) }}">{{ $product->name }}</a></h4>
+                    </td>
+                    <td class="cart_price">
+                        <p>{{ $product->price }} Frw</p>
+                    </td>
+                    <td class="cart_quantity">
+                        <div class="cart_quantity_button">
+                            <form action="{{ route('update.cart') }}" method="post">
+                                {{csrf_field()}}  
+                            <input class="cart_quantity_input" value="{{ $product->qty }}" type="text" name="qty" autocomplete="off" size="1">
+                            <input value="{{ $product->rowId }}" type="hidden" name="rowId">
+                            <input type="submit" name="submit" value="update" class="btn btn-sm btn-default">
+                            </form>
                         </div>
                     </td>
                     <td class="cart_total">

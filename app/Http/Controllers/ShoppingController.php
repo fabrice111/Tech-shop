@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
-use App\Slider;
 use Cart;
 use App\Product;
 use Illuminate\Http\Request;
@@ -66,5 +64,15 @@ class ShoppingController extends Controller
         Cart::associate($cartItem->rowId, 'App\Product');
 
         return redirect()->route('cart');
+    }
+
+    public function update_cart(Request $request)
+    {
+        $qty = $request->qty;
+        $rowId = $request->rowId;
+
+        Cart::update($rowId,$qty);
+
+        return redirect()->back();
     }
 }

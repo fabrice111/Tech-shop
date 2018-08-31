@@ -37,6 +37,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <tr>
                     @if($products->count() > 0)
                         @foreach($products as $product)
                             <td>{{ $product->id }}</td>
@@ -54,7 +55,7 @@
                                     <i class="halflings-icon white trash"></i>
                                 </a>
                             </td>
-                            </tr>
+                    </tr>
                         @endforeach
 
                     @else

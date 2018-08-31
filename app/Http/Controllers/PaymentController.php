@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\Shipping;
 use Session;
 use App\Payment;
@@ -21,11 +22,22 @@ class PaymentController extends Controller
         return view('/admin.manage_payment')->with('payments',$payments);
     }
 
-    public function view_order()
+    public function shippings()
     {
         $shippings = Shipping::all();
 
-        return view('/admin.view_order')->with('shippings',$shippings);
+        return view('/admin.shippings')->with('shippings',$shippings);
+    }
+
+    public function view_shipping_single($id)
+    {
+        $shipping = Shipping::find($id);
+        $product = Product::find($id);
+        $payments = Payment::find($id);
+
+        return view('/admin.view_shipping')->with('shipping',$shipping)
+                                              ->with('product', $product)
+                                              ->with('payments', $payments);
     }
 
     /**
@@ -96,6 +108,17 @@ class PaymentController extends Controller
         $payment->delete();
 
         Session::flash('message','Payment deleted successful.');
+
+        return redirect()->back();
+    }
+
+    public function ship_destroy($id)
+    {
+        $shipping = Shipping::find($id);
+
+        $shipping->delete();
+
+        Session::flash('message','Sjipping deleted successful.');
 
         return redirect()->back();
     }

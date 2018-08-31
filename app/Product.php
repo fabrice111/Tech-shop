@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'category_id','name','image','short_description','long_description','price','color','size'
+        'category_id','name','image','long_description','price','color','size'
     ];
 
     public function getImageAttribute($image)
@@ -18,5 +18,10 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo('App\Category');
+    }
+
+    public function payment()
+    {
+        return $this->belongsTo('App\Payment');
     }
 }

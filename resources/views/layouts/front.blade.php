@@ -58,19 +58,16 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="{{ route('index') }}"><img src="{{ asset('app/images/home/logo.png') }}" alt="" /></a>
+							<a href="{{ route('index') }}"><img src="{{ asset('app/images/home/logo2.png') }}" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								@guest
-									<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-									<li><a href="{{ route('login.check') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 									<li><a href="{{ route('login.check') }}"><i class="fa fa-lock"></i> Login</a></li>
 								@else
 									<li><a href="#"><i class="fa fa-user"></i> {{ Auth::user()->fullname }}</a></li>
-									<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 									<li><a href="{{ route('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 									<li><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 									<li><a href="{{ route('logout') }}"
@@ -103,9 +100,9 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="{{ URL::to('/') }}" class="active">Home</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="{{ URL::to('/') }}">Home</a></li>
+								<li><a href="{{ route('blog.home') }}">Blog</a></li>
+								<li><a href="{{ route('about') }}">About Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -130,13 +127,13 @@
 					<div class="col-sm-2">
 						<div class="companyinfo">
 							<h2><span>Tech</span>-shop</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<p>Make a quick order of our amazing products and we ship to you within a day</p>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
 							<img src="{{ URL:: to('app/images/home/map.png') }}" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+							<p>MN 783 Musanze, Tech-Shop(Coigo Plazza)</p>
 						</div>
 					</div>
 				</div>
@@ -147,7 +144,7 @@
 			<div class="container">
 				<div class="row">
 					<p class="pull-left">Copyright © 2018 Tech-SHOP Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="#">Fabry</a></span></p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="#">Fabrice</a></span></p>
 				</div>
 			</div>
 		</div>

@@ -5,19 +5,19 @@
     <ul class="breadcrumb">
         <li>
             <i class="icon-home"></i>
-            <a href="index.html">Home</a>
+            <a href="#">Home</a>
             <i class="icon-angle-right"></i>
         </li>
         <li>
             <i class="icon-edit"></i>
-            <a href="#">Add Product</a>
+            <a href="#">Edit Product</a>
         </li>
     </ul>
 
     <div class="row-fluid sortable">
         <div class="box span12">
             <div class="box-header" data-original-title>
-                <h2><i class="halflings-icon edit"></i><span class="break"></span>Add Product</h2>
+                <h2><i class="halflings-icon edit"></i><span class="break"></span>Edit Product</h2>
                 <div class="box-icon">
                     <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
                     <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>

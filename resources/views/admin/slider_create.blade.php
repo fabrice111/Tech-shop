@@ -38,6 +38,7 @@
                             <button type="submit" class="btn btn-primary">Add Slider</button>
                             <button type="reset" class="btn">Cancel</button>
                         </div>
+                        </div>
                     </fieldset>
                 </form>
 

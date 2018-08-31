@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\aboutus;
+use App\Blog;
 use App\Category;
 use App\Product;
 use App\Slider;
@@ -25,12 +27,28 @@ class FrontController extends Controller
 
     }
 
+    public function blog_index()
+    {
+        $sliders = Slider::all();
+        $blogs = Blog::all();
+        $categories = Category::all();
+        return view('pages/blog')->with('blogs', Blog::orderBy('created_at', 'desc')->paginate(3))
+                                              ->with('categories',$categories)
+                                              ->with('sliders',$sliders);
+    }
+
+    public function about()
+    {
+        $aboutuses = aboutus::all();
+        return view('pages/about')->with('aboutuses', $aboutuses);
+    }
+
+
     public function product_by_category($id)
     {
         $products = Product::all();
         $category = Category::find($id);
         $sliders = Slider::all();
-
         return view('pages/product_by_category')->with('products', $products)
                                                       ->with('category',$category)
                                                       ->with('sliders',$sliders);

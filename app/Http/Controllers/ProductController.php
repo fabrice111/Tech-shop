@@ -57,7 +57,6 @@ class ProductController extends Controller
             'color' => 'required',
             'image' => 'required|image',
             'size' => 'required',
-            'short_description' => 'required',
             'long_description' => 'required'
         ]);
 
@@ -71,7 +70,6 @@ class ProductController extends Controller
             'category_id' => $request->category_id,
             'name' => $request->name,
             'image' => 'uploads/products/'. $image_new_name,
-            'short_description' => $request->short_description,
             'long_description' => $request->long_description,
             'price' => $request->price,
             'color' => $request->color,
@@ -120,7 +118,6 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             'category_id' => 'required',
-            'short_description' => 'required',
             'long_description' => 'required',
             'name' => 'required',
             'price' => 'required',
@@ -142,7 +139,6 @@ class ProductController extends Controller
         }
 
         $product->category_id = $request->category_id;
-        $product->short_description = $request->short_description;
         $product->long_description = $request->long_description;
         $product->name = $request->name;
         $product->price = $request->price;

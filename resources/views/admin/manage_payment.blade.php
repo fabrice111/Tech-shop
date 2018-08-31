@@ -34,6 +34,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <tr>
                     @if($payments->count() > 0)
                         @foreach($payments as $payment)
                             <td>{{ $payment->id }}</td>
@@ -45,7 +46,7 @@
                                     <i class="halflings-icon white trash"></i>
                                 </a>
                             </td>
-                            </tr>
+                    </tr>
                         @endforeach
 
                     @else
