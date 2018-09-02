@@ -19,7 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('image');
             $table->string('name');
             $table->longText('long_description');
-            $table->float('price');
+            $table->string('quantity');
+            $table->string('price');
             $table->string('size');
             $table->string('color');
             $table->timestamps();

@@ -57,7 +57,8 @@ class ProductController extends Controller
             'color' => 'required',
             'image' => 'required|image',
             'size' => 'required',
-            'long_description' => 'required'
+            'long_description' => 'required',
+            'quantity' => 'required'
         ]);
 
         $image = $request->image;
@@ -73,7 +74,8 @@ class ProductController extends Controller
             'long_description' => $request->long_description,
             'price' => $request->price,
             'color' => $request->color,
-            'size' => $request->size
+            'size' => $request->size,
+            'quantity' => $request->quantity
 
         ]);
 
@@ -122,7 +124,8 @@ class ProductController extends Controller
             'name' => 'required',
             'price' => 'required',
             'color' => 'required',
-            'size' => 'required'
+            'size' => 'required',
+            'quantity' => 'required'
         ]);
 
         $product = Product::find($id);
@@ -144,6 +147,7 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->color = $request->color;
         $product->size = $request->size;
+        $product->quantity = $request->quantity;
 
         $product->save();
 

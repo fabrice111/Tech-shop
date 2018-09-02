@@ -49,4 +49,10 @@ class HomeController extends Controller
         }
 
     }
+
+    public function users_index()
+    {
+        $users = User::all();
+        return view('admin.users_index')->with('users',$users);
+    }
 }

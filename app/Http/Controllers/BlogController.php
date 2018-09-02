@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\aboutus;
 use App\Blog;
 use Session;
 use Illuminate\Http\Request;
@@ -18,30 +17,6 @@ class BlogController extends Controller
     {
         $blogs = Blog::all();
         return view('admin.blog')->with('blogs',$blogs);
-    }
-
-    public function aboutus()
-    {
-        return view('admin.aboutus')->with('aboutuses', aboutus::first());
-    }
-
-    public function aboutupdate()
-    {
-        $this->validate(request(), [
-            'sub_description' => 'required',
-            'description' => 'required',
-        ]);
-
-        $aboutuses = aboutus::first();
-
-        $aboutuses->sub_description = request()->sub_description;
-        $aboutuses->description = request()->description;
-
-        $aboutuses->save();
-
-        Session::flash('success','About Us updated.');
-
-        return redirect()->back();
     }
 
     /**

@@ -124,12 +124,12 @@
                     </li>
                     <li><a href="{{ route('manage.payment') }}"><i class="icon-list-alt"></i><span class="hidden-tablet"> Manage Payment</span></a></li>
                     <li><a href="{{ route('shippings') }}"><i class="icon-folder-open"></i><span class="hidden-tablet"> View Shippings</span></a></li>
+                    <li><a href="{{ route('users') }}"><i class="icon-user"></i><span class="hidden-tablet"> Users</span></a></li>
                     <li>
-                        <a class="dropmenu" href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Edit Blog</span><span class="label label-important"> 3 </span></a>
+                        <a class="dropmenu" href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Edit Blog</span><span class="label label-important"> 2 </span></a>
                         <ul>
                             <li><a class="submenu" href="{{ route('blog') }}"><i class="icon-edit"></i><span class="hidden-tablet"> Blog</span></a></li>
                             <li><a class="submenu" href="{{ route('blog_create') }}"><i class="icon-edit"></i><span class="hidden-tablet"> Add Blog</span></a></li>
-                            <li><a class="submenu" href="{{ route('aboutus') }}"><i class="icon-file-alt"></i><span class="hidden-tablet"> About Us</span></a></li>
                         </ul>
                     </li>
                 </ul>

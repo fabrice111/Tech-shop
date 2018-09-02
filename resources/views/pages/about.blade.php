@@ -4,17 +4,35 @@
 
     <div class="container">
         <div class="row">
-        @foreach($aboutuses as $aboutuses)
-            <div class="col-sm-4">
+            <div class="col-sm-8">
                 <div class="About-us">
                     <h2 class="title text-center">About Us</h2>
                     <address>
-                        <p>{{ $aboutuses->sub_description }}</p>
-                        <p>{{ $aboutuses->description }}</p>
+                        <p>Tech-SHop is your number one online shopping site in Rwanda. We are an online
+                         store where you can purchase all your electronics, as well as, home
+                         appliances, kiddies items, fashion items for men and women; cool
+                         gadgets, computers, and more on the go. What more?
+                         You can have them delivered directly to you. Shop online with great ease as you 
+                         pay with Tech-ShopPay which guarantees you the safest online shopping payment method,
+                         allowing you make stress free payments. Whatever it is you wish to buy, Tech-Shop 
+                         offers you all and lots more at prices which you can trust. Tech-Shop has payment
+                         options for everyone irrespective of taste, class, and preferences. Here, you
+                         also have the option to make your payment on delivery for extra convenience. 
+                         Shopping online in Rwanda is easy and convenient with Tech-Shop. We provide you
+                         with a wide range of products you can trust.</p>
+
+                        <p>Step out in style with Tech-Shop Fashion and Style as we bring you awesome fashion
+                         collections from top brands such as Versace, Fendi, Gucci, Valentino, Guess, Dior and more to top
+                         quality shirts and pants. 
+                         Also, get classy women's dresses from top brands such as Versace, Fendi, Gucci and Valentino,
+                         Qupid and more as well as watches from Casio, Ice, Rolex, Titan and more. 
+                         Tech-Shop makes online shopping fun with 
+                         our new arrivals as well as huge discounts on a large selection of fashion items 
+                         and more. Tech-Shop has the original New Look fashion brand online for you to shop.</p>
                     </address>
                 </div>
             </div>
-        @endforeach    
+          
 
     <div class="col-sm-4">
         <div class="contact-info">

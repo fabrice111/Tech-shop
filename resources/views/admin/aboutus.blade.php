@@ -27,7 +27,7 @@
             </div>
             @include('admin.include.errors')
             <div class="box-content">
-                <form class="form-horizontal" action="{{ route('aboutupdate') }}" method="post">
+                <form class="form-horizontal" action="{{ route('aboutus.store') }}" method="post">
                     {{ csrf_field() }}
                     <fieldset>
                         <div class="control-group hidden-phone">

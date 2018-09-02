@@ -60,6 +60,12 @@
                             </div>
                         </div>
                         <div class="control-group">
+                            <label class="control-label" for="date01">Product Quantity</label>
+                            <div class="controls">
+                                <input type="text" name="quantity" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
                             <label class="control-label" for="date01">Product Price</label>
                             <div class="controls">
                                 <input type="text" name="price" class="input-xlarge">

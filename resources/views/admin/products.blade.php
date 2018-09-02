@@ -30,6 +30,7 @@
                         <th>Name</th>
                         <th>Category</th>
                         <th>Image</th>
+                        <th>Quantity</th>
                         <th>Price</th>
                         <th>Color</th>
                         <th>Size</th>
@@ -44,6 +45,7 @@
                             <td>{{ $product->name }}</td>
                             <td>{{$product->category->name}}</td>
                             <td><img src="{{ $product->image }}" width="80px" height="80px"></td>
+                            <td>{{ $product->quantity }}</td>
                             <td>{{ $product->price }} Frw</td>
                             <td>{{ $product->color }}</td>
                             <td>{{ $product->size }}</td>

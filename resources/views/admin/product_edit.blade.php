@@ -54,15 +54,15 @@
                             </div>
                         </div>
                         <div class="control-group hidden-phone">
-                            <label class="control-label" for="textarea2">Product Short Description</label>
-                            <div class="controls">
-                                <textarea class="cleditor" name="short_description" rows="3">{{ $product->short_description }}</textarea>
-                            </div>
-                        </div>
-                        <div class="control-group hidden-phone">
                             <label class="control-label" for="textarea2">Product Long Description</label>
                             <div class="controls">
                                 <textarea class="cleditor" name="long_description" rows="3">{{ $product->long_description }}</textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="date01">Product Quantity</label>
+                            <div class="controls">
+                                <input type="text" name="quantity" value="{{ $product->quantity }}" class="input-xlarge">
                             </div>
                         </div>
                         <div class="control-group">

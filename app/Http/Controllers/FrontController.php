@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\aboutus;
 use App\Blog;
 use App\Category;
 use App\Product;
@@ -39,8 +38,7 @@ class FrontController extends Controller
 
     public function about()
     {
-        $aboutuses = aboutus::all();
-        return view('pages/about')->with('aboutuses', $aboutuses);
+        return view('pages/about');
     }
 
 

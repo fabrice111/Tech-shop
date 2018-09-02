@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'category_id','name','image','long_description','price','color','size'
+        'category_id','name','image','long_description','price','color','size','quantity'
     ];
 
     public function getImageAttribute($image)

@@ -118,7 +118,7 @@ class PaymentController extends Controller
 
         $shipping->delete();
 
-        Session::flash('message','Sjipping deleted successful.');
+        Session::flash('message','Shipping deleted successful.');
 
         return redirect()->back();
     }

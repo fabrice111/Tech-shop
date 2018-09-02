@@ -120,6 +120,11 @@ Route::get('/about', [
     'as' => 'about'
 ]);
 
+Route::get('/users', [
+    'uses' => 'HomeController@users_index',
+    'as' => 'users'
+]);
+
 
 
 
@@ -270,6 +275,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('/aboutus/update', [
         'uses' => 'BlogController@aboutupdate',
         'as' => 'aboutupdate'
+    ]);
+
+    Route::post('/aboutus/store', [
+        'uses' => 'BlogController@aboutusstore',
+        'as' => 'aboutus.store'
     ]);
 
 });

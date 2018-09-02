@@ -12,11 +12,13 @@ class ShoppingController extends Controller
     {
         $product = Product::find(request()->product_id);
 
+        $product->quantity - required_quantity;
+
         $cartItem = Cart::add([
             'id' => $product->id,
             'name' => $product->name,
             'qty' => request()->qty,
-            'price' => $product->price,
+            'price' => $product->price
         ]);
 
         Cart::associate($cartItem->rowId, 'App\Product');
@@ -58,7 +60,7 @@ class ShoppingController extends Controller
             'id' => $product->id,
             'name' => $product->name,
             'qty' => 1,
-            'price' => $product->price,
+            'price' => $product->price
         ]);
 
         Cart::associate($cartItem->rowId, 'App\Product');

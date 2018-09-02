@@ -68,8 +68,8 @@
 									<li><a href="{{ route('login.check') }}"><i class="fa fa-lock"></i> Login</a></li>
 								@else
 									<li><a href="#"><i class="fa fa-user"></i> {{ Auth::user()->fullname }}</a></li>
-									<li><a href="{{ route('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-									<li><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+									<!-- <li><a href="{{ route('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
+									<li><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i> Cart<span class="badge">{{Cart::count()}}</span></a></li>
 									<li><a href="{{ route('logout') }}"
 											onclick="event.preventDefault();
                                      		document.getElementById('logout-form').submit();">
